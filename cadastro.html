@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro | Ocorrências</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+
+    <main class="register-container">
+
+        <!-- LADO VISUAL -->
+        <section class="register-visual">
+
+            <div class="visual-content">
+
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <span>Ocorrências<span class="brand-dot">.</span></span>
+                </div>
+
+                <div class="visual-text">
+
+                    <span class="tag">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Segurança comunitária
+                    </span>
+
+                    <h1>Faça parte de uma comunidade mais segura.</h1>
+
+                    <p>
+                        Crie a sua conta e contribua para identificar,
+                        acompanhar e reportar ocorrências na sua zona.
+                    </p>
+
+                </div>
+
+                <div class="visual-features">
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <h3>Monitorização local</h3>
+                            <p>Acompanhe ocorrências na sua comunidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+
+                        <div>
+                            <h3>Reportes rápidos</h3>
+                            <p>Ajude a comunicar situações importantes.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="visual-footer">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Uma comunidade. Um propósito.</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LADO DO CADASTRO -->
+        <section class="register-form-section">
+
+            <div class="register-form-wrapper">
+
+                <!-- Marca para mobile -->
+                <div class="mobile-brand">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Ocorrências<span>.</span>
+                </div>
+
+                <div class="form-header">
+
+                    <span class="welcome-label">
+                        JUNTE-SE À COMUNIDADE
+                    </span>
+
+                    <h2>Criar uma conta</h2>
+
+                    <p>
+                        Preencha os seus dados para começar.
+                    </p>
+
+                </div>
+
+                <!-- FORMULÁRIO -->
+                <form
+                    id="registerForm"
+                    action="SEU_ENDPOINT_CADASTRO"
+                    method="POST"
+                >
+
+                    <!-- Nome completo -->
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Nome completo
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Ex.: Alfredo Eurico"
+                                autocomplete="name"
+                                required
+                                minlength="3"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="exemplo@email.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Número de telefone
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+244 9XX XXX XXX"
+                                autocomplete="tel"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <!-- Palavra-passe -->
+                    <div class="form-group">
+
+                        <label for="password">
+                            Palavra-passe
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Mínimo de 8 caracteres"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <!-- Confirmar palavra-passe -->
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirmar palavra-passe
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Repita a palavra-passe"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <!-- Política de privacidade -->
+                    <div class="privacy-checkbox">
+
+                        <label for="privacy">
+
+                            <input
+                                type="checkbox"
+                                id="privacy"
+                                name="privacyAccepted"
+                                value="true"
+                                required
+                            >
+
+                            <span>
+                                Li e aceito a
+                                <a href="politica.html">
+                                    Política de Privacidade
+                                </a>
+                                e os termos de utilização.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <!-- Botão -->
+                    <button type="submit" class="register-button">
+
+                        <span>Criar conta</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
+
+                <!-- Link para login -->
+                <div class="login-link">
+
+                    Já possui uma conta?
+
+                    <a href="login.html">
+                        Iniciar sessão
+                    </a>
+
+                </div>
+
+                <!-- Rodapé -->
+                <div class="privacy-footer">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <p>
+                        Os seus dados são tratados com segurança
+                        e responsabilidade.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
